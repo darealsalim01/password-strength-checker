@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.container::before {
+    content: 'Check Password Strength';
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: #0f172a;
+}
+
+#password {
+    width: 100%;
+    padding: 14px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: inherit;
+    color: #1e293b;
+}
+
+#password::placeholder {
+    color: #94a3b8;
+}
+
+#password:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+}
+
+#result {
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-height: 26px; /* to prevent layout shift */
+    margin: 20px 0 10px;
+    color: #64748b; /* fallback color */
+    transition: color 0.3s ease;
+}
+
+#strengthbar {
+    width: 100%;
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.05);
+}
+
+#meterbar {
+    height: 100%;
+    width: 0%;
+    border-radius: 4px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease;
+}
