@@ -14,3 +14,4 @@ The UI meter dynamically updates its width and color (red to green) based on the
 
 * **Logic & HTML:** Hand-coded HTML and JavaScript logic.
 * **Styling:** AI generated only the CSS styleout.
+You can deploy it locally or using github pages [here](https://darealsalim01.github.io/password-strength-checker/)
